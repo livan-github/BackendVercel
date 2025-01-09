@@ -63,6 +63,8 @@ app.post("/api/users", async (req, res) => {
 app.get("/api/users", async (req, res) => {
   try {
     const users = await User.find(); // Recuperar todos los usuarios de la base de datos
+
+    users.reverse()
     res.status(200).json(users);
   } catch (error) {
     console.error("Error fetching users:", error);

@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173' // Cambiar luego a la URL de producción
+    origin: ['http://localhost:5173', "https://frontend-vercel-ashy.vercel.app"] // Cambiar luego a la URL de producción
 }));
 
 // Ruta base

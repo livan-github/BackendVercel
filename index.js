@@ -81,7 +81,7 @@ app.get("/api/users", async (req, res) => {
 app.delete("/api/users/:id", async (req, res) => {
   const id = req.params.id;
   try {
-    await User.deleteOne(id);
+    await User.deleteOne({_id: id});
     res.status(200).json({ message: "Usuario eliminado" });
   } catch (error) {
     console.error("Error deleting users:", error);

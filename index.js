@@ -85,7 +85,7 @@ app.delete("/api/users/:id", async (req, res) => {
     res.status(200).json({ message: "Usuario eliminado" });
   } catch (error) {
     console.error("Error deleting users:", error);
-    res.status(500).json({ message: "Internal server error." });
+    res.status(500).json({ message: "Internal server error.", error });
   }
 });
 // Puerto
